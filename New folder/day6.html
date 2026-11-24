@@ -4,13 +4,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Brew Haven | Coffee Shop</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- INTERNAL CSS -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #faf6ef;
+            color: #33251c;
+        }
+
+        /* Navigation */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: #fffaf3;
+        }
+
+        .logo {
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #bd7746;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #33251c;
+            font-weight: 600;
+        }
+
+        .navbar ul a:hover {
+            color: #bd7746;
+        }
+
+        .nav-btn {
+            background: #75452c;
+            color: white !important;
+            padding: 12px 22px;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 75px 8%;
+            gap: 40px;
+        }
+
+        .hero-content {
+            max-width: 520px;
+        }
+
+        .tagline {
+            color: #bd7746;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #bd7746;
+        }
+
+        .description {
+            color: #76685e;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .main-btn {
+            display: inline-block;
+            background: #75452c;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .main-btn:hover {
+            background: #bd7746;
+            transform: translateY(-3px);
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 480px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Menu Section */
+
+        .menu {
+            text-align: center;
+            padding: 75px 8%;
+            background: #fffaf3;
+        }
+
+        .menu h2 {
+            font-size: 35px;
+            margin-bottom: 45px;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .coffee-card {
+            width: 280px;
+            background: #faf6ef;
+            padding: 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .coffee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px #00000015;
+        }
+
+        .coffee-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .coffee-card h3 {
+            margin: 18px 0 10px;
+        }
+
+        .coffee-card p {
+            color: #76685e;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .coffee-card h4 {
+            color: #bd7746;
+            font-size: 20px;
+        }
+
+        /* About Section */
+
+        .about {
+            padding: 90px 15%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about p:last-child {
+            color: #76685e;
+            line-height: 1.9;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 40px 15px;
+            background: #33251c;
+            color: white;
+        }
+
+        footer h2 {
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #d5c4b5;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .navbar ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-image img {
+                height: 280px;
+            }
+
+            .menu h2 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
+
+    <!-- Navigation Bar -->
 
     <header>
         <nav class="navbar">
+
             <h2 class="logo">BREW HAVEN<span>.</span></h2>
 
             <ul>
@@ -21,14 +272,21 @@
             </ul>
 
             <a href="#menu" class="nav-btn">Order Now</a>
+
         </nav>
     </header>
 
+
+    <!-- Hero Section -->
+
     <section class="hero" id="home">
+
         <div class="hero-content">
+
             <p class="tagline">FRESH COFFEE, FRESH MOOD</p>
 
-            <h1>Start Your Day<br>
+            <h1>
+                Start Your Day
                 With Perfect <span>Coffee.</span>
             </h1>
 
@@ -37,64 +295,109 @@
                 Made with love, served with happiness.
             </p>
 
-            <a href="#menu" class="main-btn">Explore Menu →</a>
+            <a href="#menu" class="main-btn">
+                Explore Menu →
+            </a>
+
         </div>
 
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900"
-                 alt="Freshly brewed coffee">
+
+            <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900"
+                alt="Freshly brewed coffee">
+
         </div>
+
     </section>
 
+
+    <!-- Menu Section -->
+
     <section class="menu" id="menu">
+
         <p class="tagline">OUR SPECIALITIES</p>
+
         <h2>Popular Coffee Choices</h2>
 
         <div class="menu-container">
 
             <div class="coffee-card">
-                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600"
-                     alt="Cappuccino">
+
+                <img
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600"
+                    alt="Cappuccino">
+
                 <h3>Cappuccino</h3>
+
                 <p>Rich espresso with creamy milk foam.</p>
+
                 <h4>₹180</h4>
+
             </div>
 
+
             <div class="coffee-card">
-                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600"
-                     alt="Latte">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600"
+                    alt="Latte">
+
                 <h3>Classic Latte</h3>
+
                 <p>Smooth coffee with steamed milk.</p>
+
                 <h4>₹200</h4>
+
             </div>
 
+
             <div class="coffee-card">
-                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600"
-                     alt="Espresso">
+
+                <img
+                    src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600"
+                    alt="Espresso">
+
                 <h3>Espresso</h3>
+
                 <p>Strong coffee with a bold flavour.</p>
+
                 <h4>₹150</h4>
+
             </div>
 
         </div>
+
     </section>
+
+
+    <!-- About Section -->
 
     <section class="about" id="about">
-        <div>
-            <p class="tagline">OUR STORY</p>
-            <h2>More Than Just Coffee.</h2>
-            <p>
-                At Brew Haven, we believe every cup tells a story.
-                Our passion is bringing people together through
-                quality coffee and unforgettable experiences.
-            </p>
-        </div>
+
+        <p class="tagline">OUR STORY</p>
+
+        <h2>More Than Just Coffee.</h2>
+
+        <p>
+            At Brew Haven, we believe every cup tells a story.
+            Our passion is bringing people together through
+            quality coffee and unforgettable experiences.
+        </p>
+
     </section>
 
+
+    <!-- Footer -->
+
     <footer id="contact">
+
         <h2>BREW HAVEN.</h2>
+
         <p>Good Coffee. Good Moments. Great Memories.</p>
+
         <p>© 2026 Brew Haven. All Rights Reserved.</p>
+
     </footer>
 
 </body>
