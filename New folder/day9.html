@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1e3a8a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        /* Home Section */
+        .home {
+            text-align: center;
+            padding: 70px 20px;
+            background-color: #dbeafe;
+        }
+
+        .home h2 {
+            font-size: 32px;
+            color: #172554;
+            margin-bottom: 15px;
+        }
+
+        .home p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .home button {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .home button:hover {
+            background-color: #2563eb;
+        }
+
+        /* Common Sections */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #172554;
+            margin-bottom: 20px;
+        }
+
+        /* About */
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* Skills */
+        .skill {
+            display: inline-block;
+            background-color: white;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+
+        /* Projects */
+        .project {
+            display: inline-block;
+            background-color: white;
+            width: 280px;
+            padding: 20px;
+            margin: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #ccc;
+            vertical-align: top;
+        }
+
+        .project h3 {
+            color: #1e3a8a;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            line-height: 1.5;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #dbeafe;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Mobile Design */
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .project {
+                width: 90%;
+            }
+
+            .home h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Portfolio</h1>
+        <p>Welcome to My Personal Website</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <h2>Hello, I'm a Web Developer</h2>
+        <p>I love creating simple and beautiful websites.</p>
+        <button onclick="location.href='#contact'">
+            Contact Me
+        </button>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a computer application student interested in
+            web development and programming. I enjoy learning
+            new technologies and creating useful projects.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project">
+            <h3>Travel Website</h3>
+            <p>A simple website to explore beautiful travel destinations.</p>
+        </div>
+
+        <div class="project">
+            <h3>Restaurant Website</h3>
+            <p>A restaurant website displaying food items and prices.</p>
+        </div>
+
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A personal website to showcase my skills and projects.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: yourmail@gmail.com</p>
+        <p>Location: India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
